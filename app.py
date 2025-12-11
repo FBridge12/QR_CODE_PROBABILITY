@@ -6,7 +6,7 @@ from flask import Flask, make_response, request
 app = Flask(__name__)
 
 
-DEBUG_MODE = True
+DEBUG_MODE = False
 TOTAL_SCANS = 60
 
 redis_url = os.environ.get('REDIS_URL')
@@ -125,4 +125,5 @@ def reset_game():
 
 
 if __name__ == '__main__':
+
     app.run()
